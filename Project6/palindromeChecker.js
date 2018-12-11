@@ -2,13 +2,22 @@
  * palindromeChecker.js
  *
  * A function to read in a string and, ignoring case and special characters,
- * determine if the given string is a palindrome.
+ * determines if the given string is a palindrome.
  *
  * @author Chris Wolf
  * @version December 11, 2018
  * chriswolfdesign@gmail.com
  */
 
+/*
+ * Takes in a string and, after ignoring case and special characters,
+ * determines if the given string is a palindrome.
+ *
+ * @param {string} str -- the string we wish to determine whether or not it
+ *                        is a palindrome
+ *
+ * @return {boolean} true if str is a palindrome, false otherwise
+ */
 function palindrome(str) {
   // Remove all non-alphabetic characters
   str = str.replace(/[\W]+/g, "");
@@ -40,5 +49,3 @@ console.log(palindrome("My age is 0, 0 si ega yM"));
 console.log(palindrome("1 eye for of 1 eye."));
 console.log(palindrome("0_0 (: /-\ :) 0-0"));
 console.log(palindrome("five|\_/|four"));
-
-
