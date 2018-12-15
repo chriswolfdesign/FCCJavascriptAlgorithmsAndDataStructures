@@ -19,7 +19,7 @@
  *                   false otherwise
  */
 function telephoneCheck(str) {
-  return str;
+  return /^(1? ?(\([0-9]{3}\)|[0-9]{3})[- ]?[0-9]{3}[- ]?[0-9]{4})$/.test(str);
 }
 
 console.log(telephoneCheck("555-555-5555"));
