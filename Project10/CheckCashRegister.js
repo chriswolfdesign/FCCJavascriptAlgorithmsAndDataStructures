@@ -9,6 +9,14 @@
  * chriswolfdesign@gmail.com
  */
 
+/*
+ * Takes in a cash register object and returns the total amount of money in
+ * the register
+ *
+ * @param {Object} register -- the cash register we are analyzing
+ *
+ * @return {Number} the total cash in the cash register
+ */
 function getRegisterTotal(register) {
   let total = 0;
 
@@ -19,16 +27,6 @@ function getRegisterTotal(register) {
   return Number(total.toFixed(2));
 }
 
-function invertArray(arr) {
-  let result = [];
-
-  for(var i = arr.length - 1; i >= 0; i--) {
-    result.push(arr[i]);
-  }
-
-  return result;
-}
-
 /*
  * Takes in the user's payment, the price of the object, and our available
  * change to determine the change to be returned to user
@@ -37,6 +35,8 @@ function invertArray(arr) {
  * @param {Number} cash -- the payment provided by the user
  * @parm {[[{String} coin : {Number} amount]] cind -- the coins we have in
  *                                                    our cash register
+ *
+ * @return {Object} the current status of the change returned and cash register
  */
 function checkCashRegister(price, cash, cid) {
   let change = cash - price;
